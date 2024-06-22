@@ -5,7 +5,7 @@ const categories = ['business', 'entertainment', 'general', 'health', 'science',
 
 const NewsList = () => {
   const [articles, setArticles] = useState([]);
-  const [category, setCategory] = useState('technology');
+  const [category, setCategory] = useState('business');
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
 
@@ -42,7 +42,7 @@ const NewsList = () => {
       <div className='flex flex-wrap gap-2 my-4 items-center justify-center'>
         {categories.map((cat) => (
           <button
-            className={`px-3 py-1 md:px-4 md:py-2 rounded-md text-white font-medium capitalize ${category === cat ? 'bg-blue-600' : 'bg-gray-500'}`} // Responsive padding
+            className={`px-3 py-1 md:px-4 md:py-2 rounded-md text-white font-medium capitalize ${category === cat ? 'bg-blue-600' : 'bg-gray-500'}`} 
             key={cat}
             onClick={() => handleCategoryChange(cat)}>
             {cat}
